@@ -1,0 +1,222 @@
+:root {
+  --primary-bg: #0a0a1a;
+  --secondary-bg: #121230;
+  --accent-color: #00ffff;
+  --text-color: #e0e0ff;
+  --grid-border: #2a2a4a;
+  --button-bg: #1a1a3a;
+  --button-hover: #2a2a5a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+}
+
+.game-container {
+  background-color: var(--secondary-bg);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+  padding: 20px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.game-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.game-header h1 {
+  font-size: 2rem;
+  color: var(--accent-color);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.game-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.game-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.next-piece, .game-stats {
+  background-color: var(--primary-bg);
+  border: 2px solid var(--grid-border);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.next-piece h3, .game-stats .stat-label {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+#next-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 20px);
+  grid-template-rows: repeat(4, 20px);
+  gap: 1px;
+  justify-content: center;
+}
+
+#next-grid div {
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--grid-border);
+  border-radius: 3px;
+}
+
+.game-stats .stat-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 5px;
+  background-color: var(--secondary-bg);
+  border-radius: 5px;
+}
+
+.game-stats .stat-label {
+  opacity: 0.7;
+}
+
+.game-stats .stat-value {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.game-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#game-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(20, 30px);
+  background-color: var(--primary-bg);
+  border: 3px solid var(--grid-border);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  gap: 1px;
+}
+
+#game-grid div {
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--grid-border);
+  transition: background-color 0.2s ease;
+}
+
+.game-controls {
+  background-color: var(--primary-bg);
+  border: 2px solid var(--grid-border);
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+}
+
+.control-hints {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.control-row {
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary-bg);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.key-icon {
+  background-color: var(--accent-color);
+  color: var(--primary-bg);
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.key-label {
+  color: var(--text-color);
+}
+
+.game-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.game-btn {
+  background-color: var(--button-bg);
+  color: var(--accent-color);
+  border: 2px solid var(--grid-border);
+  border-radius: 8px;
+  padding: 8px;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.game-btn:hover {
+  background-color: var(--button-hover);
+  transform: scale(1.05);
+}
+
+.game-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .game-wrapper {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .game-sidebar {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  #game-grid {
+    grid-template-columns: repeat(10, 25px);
+    grid-template-rows: repeat(20, 25px);
+  }
+
+  #next-grid {
+    grid-template-columns: repeat(4, 15px);
+    grid-template-rows: repeat(4, 15px);
+  }
+}
+
+/* Game State Styles */
+.paused {
+  opacity: 0.6;
+}

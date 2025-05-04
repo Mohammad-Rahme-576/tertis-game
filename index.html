@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Tetris</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>CYBER TETRIS</h1>
+        </div>
+        <div class="game-wrapper">
+            <div class="game-sidebar left-sidebar">
+                <div class="next-piece">
+                    <h3>NEXT PIECE</h3>
+                    <div id="next-grid" class="grid-preview"></div>
+                </div>
+                <div class="game-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">SCORE</span>
+                        <span id="score" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">LEVEL</span>
+                        <span id="level" class="stat-value">1</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">LINES</span>
+                        <span id="lines" class="stat-value">0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="game-main">
+                <div id="game-grid" class="tetris-grid"></div>
+                <div class="game-controls">
+                    <div class="control-hints">
+                        <div class="control-row">
+                            <span class="key-icon">←</span>
+                            <span class="key-label">Move Left</span>
+                        </div>
+                        <div class="control-row">
+                            <span class="key-icon">→</span>
+                            <span class="key-label">Move Right</span>
+                        </div>
+                        <div class="control-row">
+                            <span class="key-icon">↑</span>
+                            <span class="key-label">Rotate</span>
+                        </div>
+                        <div class="control-row">
+                            <span class="key-icon">↓</span>
+                            <span class="key-label">Soft Drop</span>
+                        </div>
+                        <div class="control-row">
+                            <span class="key-icon">SPACE</span>
+                            <span class="key-label">Hard Drop</span>
+                        </div>
+                        <div class="control-row">
+                            <span class="key-icon">P</span>
+                            <span class="key-label">Pause</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="game-sidebar right-sidebar">
+                <div class="game-actions">
+                    <button id="start-button" class="game-btn start-btn">START</button>
+                    <button id="pause-button" class="game-btn pause-btn">PAUSE</button>
+                    <button id="restart-button" class="game-btn restart-btn">RESTART</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
