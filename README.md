@@ -24,7 +24,7 @@ Stack the falling shapes to complete full lines. The game ends when the pieces s
 - JavaScript (vanilla)
 
 ## 🚀 Live Demo
-👉 [Click here to play the live demo](https://yourusername.github.io/tetris-game/)
+👉 [Click here to play the live demo](https://mohammad-rahme-576.github.io/tertis-game/)
 
 ## 📂 Running Locally
 1. Clone this repo:
