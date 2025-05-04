@@ -29,4 +29,4 @@ Stack the falling shapes to complete full lines. The game ends when the pieces s
 ## 📂 Running Locally
 1. Clone this repo:
    ```bash
-   git clone https://github.com/yourusername/tetris-game.git
+   git clone https://github.com/Mohammad-Rahme-576/tertis-game.git
